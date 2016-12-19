@@ -1,5 +1,6 @@
 # import csv
 import csv
+import math
 
 # open csvfile
 csvfile = open('csvtriangle.csv', 'w')
@@ -11,7 +12,7 @@ csvwriter = csv.writer(csvfile, delimiter = ',')
 
 for a in range(1,101):
     for b in range(a,101):
-        hypotenuse = ((a**2) + (b**2))**.5
+        hypotenuse = sqrt((a**2) + (b**2))
         csvwriter.writerow([a,b, hypotenuse])
 
 # close file
